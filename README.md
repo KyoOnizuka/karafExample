@@ -26,7 +26,7 @@ Getting Started
 
 2.Config Blueprint for exposed Service
 	feature:install aries-blueprint 
-
+ 
 3.Config Cxf for REST API
 	feature:repo-add cxf 3.4.0
 	feature:install cxf-http-jetty cxf-jaxrs
@@ -37,6 +37,12 @@ Getting Started
 	Install
 		bundle:install mvn:com.ttbao.example/device/1.0.0-SNAPSHOT
 		bundle:install mvn:com.ttbao.example/app/1.0.0-SNAPSHOT
+
+4.1 Config Mariadb
+Install Mariadb
+feature:install pax-jdbc-mariadb
+fix file datasource
+fix file Persistence.xml
 	
 5.Test
 
