@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1604478109696
+Build-Jdk: 1.8.0_232
+Built-By: hngoctra
+Bundle-Blueprint: OSGI-INF/blueprint/descriptor.xml
+Bundle-ManifestVersion: 2
+Bundle-Name: device
+Bundle-SymbolicName: com.ttbao.example.device
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Dynamic-Import-Package: *, org.hibernate.proxy, javassist.util.proxy
+Export-Package: com.ttbao.example.device.ServiceImpl.Interface;version="
+ 1.0.0";uses:="com.ttbao.example.app.DTO",com.ttbao.example.device.Servi
+ ceImpl.Impl;version="1.0.0";uses:="com.ttbao.example.app.DTO,com.ttbao.
+ example.device.DAO,com.ttbao.example.device.ServiceImpl.Interface",com.
+ ttbao.example.device.DAO;version="1.0.0";uses:="com.ttbao.example.devic
+ e.Entity,javax.transaction",com.ttbao.example.device.Entity;version="1.
+ 0.0";uses:="javax.persistence",com.ttbao.example.device.Converter;versi
+ on="1.0.0";uses:="com.ttbao.example.app.DTO,com.ttbao.example.device.En
+ tity"
+Export-Service: com.ttbao.example.device.DAO.IDeviceDAO,com.ttbao.exampl
+ e.device.ServiceImpl.Interface.DeviceService
+Import-Package: com.google.gson;version="2.8.5",com.google.gson.reflect;
+ version="2.8.5",javax.transaction;version="[1.2,2)",javax.persistence;v
+ ersion="[2.1,3)",com.ttbao.example.app.DTO;version="[1.0,2)",javax.nami
+ ng,org.osgi.service.coordinator,org.hibernate.proxy;version="[4.3,5)",j
+ avassist.util.proxy;version="[3.18,4)",javax.inject;version="1.0.0",org
+ .apache.aries.jpa.template;version="[1.0,2)"
+Meta-Persistence: META-INF/persistence.xml
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.0.0.201509101326

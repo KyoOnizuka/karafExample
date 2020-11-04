@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/resources" excluding="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="var" path="M2_REPO/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2.jar" sourcepath="M2_REPO/javax/transaction/javax.transaction-api/1.2/javax.transaction-api-1.2-sources.jar"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="var" path="M2_REPO/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar" sourcepath="M2_REPO/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/karaf/shell/org.apache.karaf.shell.console/4.0.4/org.apache.karaf.shell.console-4.0.4.jar" sourcepath="M2_REPO/org/apache/karaf/shell/org.apache.karaf.shell.console/4.0.4/org.apache.karaf.shell.console-4.0.4-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/jline/jline/2.13/jline-2.13.jar" sourcepath="M2_REPO/jline/jline/2.13/jline-2.13-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/ntanh/.m2/repository/jline/jline/2.13/jline-2.13-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/karaf/jaas/org.apache.karaf.jaas.modules/4.0.4/org.apache.karaf.jaas.modules-4.0.4.jar" sourcepath="M2_REPO/org/apache/karaf/jaas/org.apache.karaf.jaas.modules/4.0.4/org.apache.karaf.jaas.modules-4.0.4-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/karaf/jaas/org.apache.karaf.jaas.config/4.0.4/org.apache.karaf.jaas.config-4.0.4.jar" sourcepath="M2_REPO/org/apache/karaf/jaas/org.apache.karaf.jaas.config/4.0.4/org.apache.karaf.jaas.config-4.0.4-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/felix/org.apache.felix.fileinstall/3.5.0/org.apache.felix.fileinstall-3.5.0.jar" sourcepath="M2_REPO/org/apache/felix/org.apache.felix.fileinstall/3.5.0/org.apache.felix.fileinstall-3.5.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/ntanh/.m2/repository/org/apache/felix/org.apache.felix.fileinstall/3.5.0/org.apache.felix.fileinstall-3.5.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/karaf/jaas/org.apache.karaf.jaas.boot/4.0.4/org.apache.karaf.jaas.boot-4.0.4.jar" sourcepath="M2_REPO/org/apache/karaf/jaas/org.apache.karaf.jaas.boot/4.0.4/org.apache.karaf.jaas.boot-4.0.4-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/karaf/shell/org.apache.karaf.shell.core/4.0.4/org.apache.karaf.shell.core-4.0.4.jar" sourcepath="M2_REPO/org/apache/karaf/shell/org.apache.karaf.shell.core/4.0.4/org.apache.karaf.shell.core-4.0.4-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/sshd/sshd-core/0.14.0/sshd-core-0.14.0.jar" sourcepath="M2_REPO/org/apache/sshd/sshd-core/0.14.0/sshd-core-0.14.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/ntanh/.m2/repository/org/apache/sshd/sshd-core/0.14.0/sshd-core-0.14.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar" sourcepath="M2_REPO/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/junit/junit/3.8.1/junit-3.8.1.jar" sourcepath="M2_REPO/junit/junit/3.8.1/junit-3.8.1-sources.jar"/>
+</classpath>

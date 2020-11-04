@@ -1,0 +1,34 @@
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0" xmlns:jpa="http://aries.apache.org/xmlns/jpa/v2.0.0"
+           xmlns:tx="http://aries.apache.org/xmlns/transactions/v1.2.0"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cxf="http://cxf.apache.org/blueprint/core"
+           xmlns:jaxrs="http://cxf.apache.org/blueprint/jaxrs"
+           xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 https://osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd"
+           default-activation="eager">
+    <jpa:enable/>
+    <tx:enable-annotations/>
+    <cxf:bus>
+        <cxf:features>
+            <cxf:logging/>
+        </cxf:features>
+    </cxf:bus>
+
+    <reference interface="org.apache.cxf.transport.http.DestinationRegistry" timeout="30000" availability="mandatory"/>
+    <reference id="m_deviceService" interface="com.ttbao.example.device.ServiceImpl.Interface.DeviceService"
+               availability="mandatory"/>
+
+    <bean id="app" class="com.ttbao.example.app.Controller.DeviceControllerImpl">
+        <property name="m_deviceService" ref="m_deviceService"></property>
+    </bean>
+    <service id="appInterface" ref="app" interface="com.ttbao.example.app.Controller.DeviceController"></service>
+
+    <jaxrs:server address="/device" id="deviceServer">
+        <jaxrs:serviceBeans>
+            <ref component-id="app"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:features>
+            <cxf:logging/>
+        </jaxrs:features>
+
+    </jaxrs:server>
+
+</blueprint>

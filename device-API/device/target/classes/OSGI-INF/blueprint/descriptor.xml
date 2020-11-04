@@ -1,0 +1,21 @@
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0" xmlns:jpa="http://aries.apache.org/xmlns/jpa/v2.0.0"
+           xmlns:tx="http://aries.apache.org/xmlns/transactions/v1.2.0"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 https://osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd"
+           default-activation="eager">
+    <jpa:enable/>
+    <tx:enable-annotations/>
+
+    <bean id="deviceDAOImpl" class="com.ttbao.example.device.DAO.DeviceDAOImpl">
+    </bean>
+
+    <service interface="com.ttbao.example.device.DAO.IDeviceDAO" ref="deviceDAOImpl"></service>
+    <bean id="deviceServiceImpl" class="com.ttbao.example.device.ServiceImpl.Impl.DeviceServiceImpl">
+        <property name="m_deviceDAO" ref="deviceDAOImpl"/>
+    </bean>
+
+    <service id="deviceService" ref="deviceServiceImpl"
+             interface="com.ttbao.example.device.ServiceImpl.Interface.DeviceService">
+    </service>
+
+</blueprint>
